@@ -9,31 +9,24 @@ A [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) plugin for t
 
 ## Installation
 
-### Via Decky developer settings (easiest)
+First, install [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader), then enable **Developer Mode** in the Decky settings (gear icon in the Quick Access Menu).
 
-1. Install [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) on your Steam Deck.
-2. Open the Quick Access Menu and go to the Decky settings (gear icon).
-3. Enable **Developer Mode**.
-4. In the new **Developer** section, select **Install Plugin from ZIP**.
-5. Enter the URL of the latest release zip:
+### Install from URL (easiest)
+
+1. In the **Developer** section, select **Install Plugin from URL**.
+2. Enter:
 
    ```text
    https://github.com/NeonPimpZ/decky-ssh-toggle/releases/latest/download/decky-ssh-toggle.zip
    ```
 
-6. Confirm — the plugin will install and appear under the plug icon.
+3. Confirm — the plugin will install and appear under the plug icon.
 
-### Manual install
+### Install from ZIP
 
-1. Download `decky-ssh-toggle.zip` from the [latest release](https://github.com/NeonPimpZ/decky-ssh-toggle/releases/latest).
-2. Extract the zip and copy the `decky-ssh-toggle` folder to `~/homebrew/plugins/` on your Steam Deck.
-3. Restart the plugin loader:
-
-   ```sh
-   sudo systemctl restart plugin_loader
-   ```
-
-4. Open the Quick Access Menu — SSH Toggle will appear under the plug icon.
+1. Download `decky-ssh-toggle.zip` from the [latest release](https://github.com/NeonPimpZ/decky-ssh-toggle/releases/latest) onto your Steam Deck.
+2. In the **Developer** section, select **Install Plugin from ZIP** and select the downloaded file.
+3. The plugin will install and appear under the plug icon.
 
 ## Development
 

@@ -55,6 +55,8 @@ pnpm build:docker   # reproducible build inside Docker
 
 ### Deploy
 
+> **Note:** SSH must be enabled on your SteamDeck before deploying. Run `sudo systemctl start sshd` on the Deck manually once. After that you can toggle SSH via the plugin.
+
 Copy the built plugin to your Steam Deck and restart the plugin loader:
 
 ```bash

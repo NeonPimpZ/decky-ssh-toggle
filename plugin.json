@@ -1,0 +1,6 @@
+{
+  "name": "SSH Toggle",
+  "author": "NeonPimpZ",
+  "flags": ["root"],
+  "api_version": 2
+}

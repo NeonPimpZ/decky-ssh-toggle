@@ -1,0 +1,38 @@
+{
+  "name": "decky-ssh-toggle",
+  "version": "1.0.0",
+  "description": "Decky plugin to toggle SSH on the Steam Deck",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c",
+    "build:docker": "docker run --rm -v \"$(pwd):/plugin\" -w /plugin node:lts-alpine sh -c \"npm install -g pnpm && pnpm install && pnpm build\"",
+    "pack": "npm run build:docker && zip -r decky-ssh-toggle.zip dist/index.js dist/index.js.map main.py plugin.json package.json",
+    "deploy": "./scripts/deploy.sh",
+    "watch": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NeonPimpZ",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@decky/rollup": "^1.0.2",
+    "@decky/ui": "^4.11.0",
+    "@rollup/rollup-linux-x64-musl": "^4.53.3",
+    "@types/react": "19.1.1",
+    "@types/react-dom": "19.1.1",
+    "rollup": "^4.53.3",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@decky/api": "^1.1.3",
+    "react-icons": "^5.3.0",
+    "tslib": "^2.7.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom"
+      ]
+    }
+  }
+}
